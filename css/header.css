@@ -1,5 +1,6 @@
 header {
   position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -7,12 +8,16 @@ header {
   background-color: var(--darkGreyBgColor);
 }
 
+.header_scroll {
+  opacity: 0.95;
+}
+
 .tbc_icon a img {
   transform: scale(1.14);
 }
 
 nav {
-  width: 970px;
+  width: var(--contentSize);
   display: flex;
   justify-content: space-between;
   align-items: center;
