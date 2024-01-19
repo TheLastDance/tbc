@@ -1,5 +1,6 @@
 @import url(./resets.css);
 @import url(./header.css);
+@import url(./intro.css);
 
 body {
   color: var(--textColor);
@@ -7,8 +8,12 @@ body {
 }
 
 main {
-  margin-top: 84px;
-  background-color: var(--greyBgColor);
+  position: relative;
+  top: 84px;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
@@ -18,5 +23,10 @@ main {
   --darkGreyBgColor: rgb(26, 30, 31);
   --greyBgColor: rgb(43, 43, 43);
   --footerBgColor: rgb(26, 30, 31);
-  --contentSize: 955px;
+  --contentSize: 980px;
+  --scaleFactor: 1;
+  --FS42: calc(42px * var(--scaleFactor));
+  --FS34: calc(34px * var(--scaleFactor));
+  --FS28: calc(28px * var(--scaleFactor));
+  --FS22: calc(22px * var(--scaleFactor));
 }

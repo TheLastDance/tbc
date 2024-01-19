@@ -6,14 +6,26 @@ header {
   width: 100%;
   height: 84px;
   background-color: var(--darkGreyBgColor);
+  z-index: 1;
 }
 
 .header_scroll {
   opacity: 0.95;
 }
 
+.tbc_icon {
+  width: 182px;
+  height: 40px;
+}
+
+.tbc_icon a {
+  width: 100%;
+  height: 100%;
+}
+
 .tbc_icon a img {
-  transform: scale(1.14);
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -39,9 +51,13 @@ nav {
 
 .navigation_list li a {
   line-height: 26px;
-  text-decoration: none;
   color: var(--textColor);
   font-weight: 500;
+  transition: ease .4s;
+}
+
+.navigation_list li a:hover {
+  color: var(--darkBlueColor);
 }
 
 .navigation_list li .navLink_active {
