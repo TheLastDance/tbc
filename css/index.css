@@ -2,6 +2,7 @@
 @import url(./header.css);
 @import url(./intro.css);
 @import url(./courses.css);
+@import url(./slider.css);
 
 body {
   color: var(--textColor);
@@ -17,6 +18,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 :root {
   --blueColor: rgb(0, 174, 239);
   --darkBlueColor: rgb(0, 136, 203);
@@ -25,7 +32,8 @@ a {
   --darkGreyBgColor: rgb(22, 22, 22);
   --greyBgColor: rgb(43, 43, 43);
   --footerBgColor: rgb(26, 30, 31);
-  --cardBorderColor: rgba(85, 85, 85);
+  --cardBorderColor: rgb(85, 85, 85);
+  --arrowIconColor: rgb(232, 230, 230);
   --contentSize: 980px;
   --scaleFactor: 1;
   --FS42: calc(42px * var(--scaleFactor));
