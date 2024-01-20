@@ -25,6 +25,7 @@ a {
   --darkGreyBgColor: rgb(22, 22, 22);
   --greyBgColor: rgb(43, 43, 43);
   --footerBgColor: rgb(26, 30, 31);
+  --cardBorderColor: rgba(85, 85, 85);
   --contentSize: 980px;
   --scaleFactor: 1;
   --FS42: calc(42px * var(--scaleFactor));
@@ -32,4 +33,6 @@ a {
   --FS28: calc(28px * var(--scaleFactor));
   --FS24: calc(24px * var(--scaleFactor));
   --FS22: calc(22px * var(--scaleFactor));
+  --FS18: calc(18px * var(--scaleFactor));
+  --FS14: calc(14px * var(--scaleFactor));
 }

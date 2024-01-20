@@ -14,6 +14,59 @@
   padding-bottom: 67px;
 }
 
-.courses_content p {
-  margin-top: 150px;
+#course_list {
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  row-gap: 25px;
+  column-gap: 40px;
+}
+
+#course_list li {
+  border: 1px solid var(--cardBorderColor);
+  border-radius: 6px;
+  min-height: 414px;
+  display: flex;
+  flex-direction: column;
+}
+
+#course_list picture img {
+  width: 100%;
+}
+
+.course_info {
+  margin-left: 22px;
+  display: grid;
+  flex-grow: 1;
+}
+
+.course_info h5 {
+  font-size: var(--FS18);
+  margin: 34px 0 25px 0;
+}
+
+.course_info p {
+  font-size: var(--FS14);
+  margin-bottom: 80px;
+}
+
+.course_details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.course_details a {
+  color: var(--blueColor);
+  font-size: var(--FS18);
+  line-height: 18px;
+  margin-left: 10px;
+  font-weight: 500;
+  transition: ease .4s;
+}
+
+.course_details a:hover {
+  opacity: 0.7;
 }
