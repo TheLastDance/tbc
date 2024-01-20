@@ -1,0 +1,19 @@
+.courses {
+  width: 100%;
+  background-color: var(--darkGreyBgColor);
+}
+
+.courses_content {
+  max-width: var(--contentSize);
+  margin: 0 auto;
+  padding: 34px 0 58px 0;
+}
+
+.courses_content h3 {
+  font-size: var(--FS24);
+  padding-bottom: 67px;
+}
+
+.courses_content p {
+  margin-top: 150px;
+}

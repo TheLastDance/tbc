@@ -1,6 +1,7 @@
 @import url(./resets.css);
 @import url(./header.css);
 @import url(./intro.css);
+@import url(./courses.css);
 
 body {
   color: var(--textColor);
@@ -20,7 +21,7 @@ a {
   --blueColor: rgb(0, 174, 239);
   --darkBlueColor: rgb(0, 136, 203);
   --textColor: rgb(244, 244, 244);
-  --darkGreyBgColor: rgb(26, 30, 31);
+  --darkGreyBgColor: rgb(22, 22, 22);
   --greyBgColor: rgb(43, 43, 43);
   --footerBgColor: rgb(26, 30, 31);
   --contentSize: 980px;
@@ -28,5 +29,6 @@ a {
   --FS42: calc(42px * var(--scaleFactor));
   --FS34: calc(34px * var(--scaleFactor));
   --FS28: calc(28px * var(--scaleFactor));
+  --FS24: calc(24px * var(--scaleFactor));
   --FS22: calc(22px * var(--scaleFactor));
 }
