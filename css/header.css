@@ -7,10 +7,12 @@ header {
   height: 84px;
   background-color: var(--footerBgColor);
   z-index: 1;
+  transition: ease .4s;
 }
 
 .header_scroll {
   opacity: 0.95;
+  background-color: var(--navHoverColor);
 }
 
 .tbc_icon {
