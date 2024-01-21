@@ -45,7 +45,7 @@
   width: 100%;
   min-height: 110px;
   position: relative;
-  margin: 60px 0;
+  margin: 60px 0 0 0;
 }
 
 .slider_item {
@@ -66,4 +66,22 @@
   top: 0;
   opacity: 0;
   visibility: hidden;
+}
+
+#slider_buttons {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 45px 0;
+}
+
+#slider_buttons button {
+  margin-right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--arrowIconColor);
+}
+
+#slider_buttons button:last-child {
+  margin-right: 0;
 }
