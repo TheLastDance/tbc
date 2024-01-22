@@ -1,0 +1,87 @@
+footer {
+  position: relative;
+  top: 84px;
+  width: 100%;
+  background-color: var(--footerBgColor);
+}
+
+.footer_container {
+  max-width: var(--contentSize);
+  margin: 0 auto;
+  padding: 64px 0 43px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "tbc social"
+    "privacy social";
+}
+
+
+.tbc_logo {
+  grid-area: tbc;
+  display: flex;
+  align-items: center;
+}
+
+.social {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.social_icons {
+  display: flex;
+}
+
+.social .write_to_us {
+  transition: ease .4s;
+  border-radius: 5px;
+  color: var(--textColor);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  padding: 8px 35px;
+  font-size: var(--FS16);
+  background-color: var(--blueColor);
+}
+
+.social .write_to_us:hover {
+  background-color: var(--arrowIconColor);
+  color: var(--darkGreyBgColor);
+}
+
+.social .social_icons a {
+  margin-right: 10px;
+}
+
+.social .social_icons a:last-child {
+  margin-right: 0;
+}
+
+.social .social_icons a picture {
+  display: flex;
+}
+
+.privacy {
+  grid-area: privacy;
+}
+
+.privacy .copyright {
+  font-size: var(--FS14);
+  margin: 25px 0 15px 0;
+}
+
+.privacy .copyright a {
+  color: var(--textColor);
+}
+
+.privacy .copyright a span {
+  font-size: var(--FS12);
+  position: relative;
+  bottom: 3px;
+}
+
+.privacy .privacy_button {
+  font-size: var(--FS14);
+  color: var(--textColor);
+}

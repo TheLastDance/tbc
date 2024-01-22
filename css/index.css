@@ -4,6 +4,7 @@
 @import url(./courses.css);
 @import url(./slider.css);
 @import url(./accordion.css);
+@import url(./footer.css);
 
 body {
   color: var(--textColor);
@@ -45,5 +46,7 @@ button {
   --FS22: calc(22px * var(--scaleFactor));
   --FS20: calc(20px * var(--scaleFactor));
   --FS18: calc(18px * var(--scaleFactor));
+  --FS16: calc(16px * var(--scaleFactor));
   --FS14: calc(14px * var(--scaleFactor));
+  --FS12: calc(12px * var(--scaleFactor));
 }
