@@ -3,6 +3,7 @@
 @import url(./intro.css);
 @import url(./courses.css);
 @import url(./slider.css);
+@import url(./accordion.css);
 
 body {
   color: var(--textColor);
@@ -34,6 +35,7 @@ button {
   --footerBgColor: rgb(26, 30, 31);
   --cardBorderColor: rgb(85, 85, 85);
   --arrowIconColor: rgb(232, 230, 230);
+  --accordionBorder: rgb(53, 49, 49);
   --contentSize: 980px;
   --scaleFactor: 1;
   --FS42: calc(42px * var(--scaleFactor));
@@ -41,6 +43,7 @@ button {
   --FS28: calc(28px * var(--scaleFactor));
   --FS24: calc(24px * var(--scaleFactor));
   --FS22: calc(22px * var(--scaleFactor));
+  --FS20: calc(20px * var(--scaleFactor));
   --FS18: calc(18px * var(--scaleFactor));
   --FS14: calc(14px * var(--scaleFactor));
 }
