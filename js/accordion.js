@@ -1,5 +1,3 @@
-const container = document.querySelector("#accordion_questions");
-
 const addImage = (href, alt) => {
   const image = new Image();
   image.src = href;
@@ -7,7 +5,7 @@ const addImage = (href, alt) => {
   return image;
 }
 
-const buildAccordion = (data) => {
+const buildAccordion = (data, container) => {
   const parser = new DOMParser();
 
   data.forEach((item) => {
@@ -16,7 +14,7 @@ const buildAccordion = (data) => {
 
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "accordion-button";
+    button.className = "accordion-button no-display";
     button.textContent = item.title;
 
     const icon = addImage("./assets/icons/arrowDown.svg", "arrow");
@@ -30,25 +28,25 @@ const buildAccordion = (data) => {
   })
 }
 
-const accordionFunctionality = () => {
+const accordionFunctionality = (container) => {
 
   container.addEventListener("click", (e) => {
-    const items = document.querySelectorAll(".accordion-dropdown");
-    const dropdown = e.target.parentNode.querySelector(".accordion-dropdown");
+    const items = container.querySelectorAll(".accordion-button");
+    const button = e.target.closest('.accordion-button');
 
-    if (e.target.className === "accordion-button") {
+    if (button) {
       items.forEach(item => {
-        if (item !== dropdown) item.classList.add("no-display");
+        if (item !== button) item.classList.add("no-display");
       });
 
-      dropdown.classList.toggle("no-display");
+      button.classList.toggle("no-display");
     }
   })
 }
 
-export const accordion = (data) => {
-  buildAccordion(data);
-  accordionFunctionality();
+export const accordion = (data, container) => {
+  buildAccordion(data, container);
+  accordionFunctionality(container);
 }
 
 

@@ -6,7 +6,7 @@
 .accordion_container {
   max-width: var(--contentSize);
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 40px;
 }
 
 .accordion_head {
@@ -31,6 +31,10 @@
   color: var(--arrowIconColor);
 }
 
+#accordion_questions {
+  padding-bottom: 72px;
+}
+
 .accordion-item {
   border-bottom: 1px solid var(--accordionBorder);
   width: 100%;
@@ -48,6 +52,40 @@
   min-height: 75px;
 }
 
-.accordion-item .no-display {
+.accordion-item .no-display+div {
   display: none;
+}
+
+.accordion-item .accordion-button img {
+  transform: rotate(180deg);
+}
+
+.accordion-item .no-display img {
+  transform: rotate(0deg);
+}
+
+.accordion-dropdown {
+  margin-bottom: 30px;
+  font-size: var(--FS14);
+}
+
+.accordion-dropdown>p {
+  padding: 2px 0 3px 0;
+}
+
+.accordion-dropdown>div {
+  padding: 30px 0 30px 20px;
+}
+
+.accordion-dropdown>div p {
+  line-height: 26px;
+  padding-bottom: 8px;
+}
+
+.accordion-dropdown>div p:last-child {
+  padding-bottom: 0;
+}
+
+.accordion-dropdown span {
+  font-weight: 700;
 }
