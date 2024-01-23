@@ -1,13 +1,7 @@
 import { coursesData } from "../data/courses.js";
+import { addImage } from "./utils.js";
 
 const list = document.querySelector("#course_list");
-
-const addImage = (href, alt) => {
-  const image = new Image();
-  image.src = href;
-  image.alt = alt;
-  return image;
-}
 
 const addPicture = (href1, href2, alt) => {
   const picture = document.createElement("picture");
