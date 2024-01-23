@@ -138,7 +138,7 @@
       </div>
       <div class="social">
         <div class="social_icons">
-          <a href="https://www.facebook.com/tbcbank/" target="_blank">
+          <a role="button" href="https://www.facebook.com/tbcbank/" target="_blank">
             <picture>
               <source srcset="./assets/icons/facebookIcon.webp" type="image/webp">
               <img src="./assets/icons/facebookIcon.png" alt="logo">
@@ -160,9 +160,19 @@
           </a>
           ყველა უფლება დაცულია
         </div>
-        <button type="button" class="privacy_button">
+        <button type="button" id="privacy_button">
           წესები და პირობები
         </button>
+      </div>
+    </div>
+    <div id="privacy_popup" class="privacy_popup">
+      <button type="button" id="privacy_popup_close">
+        <img src="./assets/icons/closeBtn.svg" alt="close">
+      </button>
+      <div class="privacy_popup_content">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
       </div>
     </div>
   </footer>

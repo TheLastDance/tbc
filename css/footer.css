@@ -81,7 +81,24 @@ footer {
   bottom: 3px;
 }
 
-.privacy .privacy_button {
+.privacy #privacy_button {
   font-size: var(--FS14);
   color: var(--textColor);
+}
+
+.privacy_popup {
+  visibility: hidden;
+  position: fixed;
+  width: 36%;
+  height: 100%;
+  right: -36%;
+  top: 0;
+  background-color: var(--greyBgColor);
+  z-index: 1;
+}
+
+.popup_open {
+  visibility: visible;
+  right: 0;
+  transition: ease .4s;
 }
