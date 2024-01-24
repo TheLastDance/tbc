@@ -65,3 +65,67 @@ nav {
 .navigation_list li .navLink_active {
   color: var(--darkBlueColor);
 }
+
+.burger {
+  display: none;
+  width: 26px;
+  height: 21px;
+}
+
+.burger div {
+  width: 50%;
+  height: 3px;
+  background-color: var(--arrowIconColor);
+  border-radius: 1.5px;
+}
+
+/* .burger div:nth-child(1) {
+  transform-origin: right;
+  grid-column: 1/ span 2;
+}
+
+.burger div:nth-child(2) {
+  width: 100%;
+  grid-column: 1/ span 2;
+}
+
+.burger div:nth-child(3) {
+  transform-origin: left;
+  grid-column: 1/span 3;
+} */
+
+.burger div:nth-child(1) {
+  transform-origin: right;
+}
+
+.burger div:nth-child(2) {
+  width: 100%;
+}
+
+.burger div:nth-child(3) {
+  transform-origin: left;
+  align-self: flex-end;
+}
+
+@media(max-width:980px) {
+  .burger {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav {
+    margin: 0 calc(50px * var(--scaleFactor));
+  }
+
+  .navigation_list {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+  }
+
+}
