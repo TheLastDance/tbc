@@ -38,8 +38,9 @@
 
 .course_info {
   margin-left: 22px;
-  display: grid;
-  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .course_info h5 {
@@ -54,8 +55,9 @@
 
 .course_details {
   display: flex;
-  align-items: center;
-  margin-bottom: 21px;
+  align-items: end;
+  flex-grow: 1;
+  margin-bottom: 25px;
 }
 
 .course_details a {
