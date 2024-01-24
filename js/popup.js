@@ -7,6 +7,8 @@ const privacyPopupClose = document.querySelector("#privacy_popup_close");
 const privacyPopupCloseBig = document.querySelector("#privacy_popup_close_big");
 const privacyOpenButton = document.querySelector("#privacy_button");
 const overlay = document.querySelector("#overlay");
+const burger = document.querySelector("#burger");
+const nav = document.querySelector("#navigation_list");
 
 const addBgFilter = () => {
   overlay.classList.add("overlay");
@@ -30,7 +32,7 @@ export const popupHandler = (clickEl, closeEl, popupEl) => {
     popupEl.scrollTop = 0;
   });
 
-  closeEl.addEventListener("click", () => onClosePopup(popupEl))
+  if (closeEl) closeEl.addEventListener("click", () => onClosePopup(popupEl));
 
   clickOutside(popupEl, () => onClosePopup(popupEl));
   focusTrap(popupEl, () => onClosePopup(popupEl));
@@ -39,4 +41,8 @@ export const popupHandler = (clickEl, closeEl, popupEl) => {
 export const footerPopUp = () => {
   popupHandler(privacyOpenButton, privacyPopupClose, privacyPopup);
   privacyPopupCloseBig.addEventListener("click", () => onClosePopup(privacyPopup))
+}
+
+export const burgerPopup = () => {
+  popupHandler(burger, null, nav);
 }

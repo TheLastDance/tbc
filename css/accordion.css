@@ -89,3 +89,18 @@
 .accordion-dropdown span {
   font-weight: 700;
 }
+
+@media(max-width:600px) {
+
+  .accordion_head h3 {
+    margin-right: 5px;
+  }
+
+  .accordion_head a {
+    text-align: end;
+  }
+
+  .accordion-item .accordion-button {
+    text-align: start;
+  }
+}

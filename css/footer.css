@@ -1,6 +1,9 @@
-.footer {
+footer {
   position: relative;
-  top: 84px;
+  top: var(--fixedHeight);
+}
+
+.footer {
   width: 100%;
   background-color: var(--footerBgColor);
 }

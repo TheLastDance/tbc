@@ -14,14 +14,14 @@
 
 #left_arrow {
   position: absolute;
-  left: 100px;
+  left: 5%;
   transform: translateY(-50%);
 }
 
 #right_arrow {
   position: absolute;
   transform: translateY(-50%) rotate(180deg);
-  right: 100px;
+  right: 5%;
 }
 
 .slider svg {
@@ -84,4 +84,40 @@
 
 #slider_buttons button:last-child {
   margin-right: 0;
+}
+
+@media(max-width:1200px) {
+  .slider_item_container {
+    width: 80%;
+    margin: 60px auto 0 auto;
+  }
+}
+
+@media(max-width:980px) {
+  .slider_item_container {
+    min-height: 300px;
+  }
+
+  .slider_item {
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+  }
+
+  #right_arrow,
+  #left_arrow {
+    display: none;
+  }
+}
+
+@media(max-width:320px) {
+  .slider_item picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .slider_item picture img {
+    width: 80%;
+  }
 }

@@ -56,6 +56,7 @@ nav {
   color: var(--textColor);
   font-weight: 500;
   transition: ease .4s;
+  font-size: var(--FS16);
 }
 
 .navigation_list li a:hover {
@@ -104,7 +105,6 @@ nav {
 
 .burger div:nth-child(3) {
   transform-origin: left;
-  align-self: flex-end;
 }
 
 @media(max-width:980px) {
@@ -115,17 +115,26 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    display: none;
   }
 
-  nav {
-    margin: 0 calc(50px * var(--scaleFactor));
+  .navigation_container {
+    display: none;
+    position: fixed;
+    width: 65%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    background-color: var(--greyBgColor);
+    z-index: 5;
   }
 
   .navigation_list {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    right: -100%;
+    position: relative;
+    top: var(--fixedHeight);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
   }
 
 }
