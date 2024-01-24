@@ -97,6 +97,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: end;
   overflow-y: auto;
 }
 
@@ -114,7 +115,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-end;
   margin: 29px 30px 20px 0;
 }
 
