@@ -1,5 +1,5 @@
 
-import { clickOutside } from "./clickOutside.js";
+import { clickOutsidePopup } from "./clickOutside.js";
 import { focusTrap } from "./focusTrap.js";
 
 const privacyPopup = document.querySelector("#privacy_popup");
@@ -10,39 +10,72 @@ const overlay = document.querySelector("#overlay");
 const burger = document.querySelector("#burger");
 const nav = document.querySelector("#navigation_list");
 
-const addBgFilter = () => {
-  overlay.classList.add("overlay");
+const addBgFilter = (isOverlay) => {
+  if (isOverlay) overlay.classList.add("overlay");
 }
 
-const removeBgFilter = () => {
-  overlay.classList.remove("overlay");
+const removeBgFilter = (isOverlay) => {
+  if (isOverlay) overlay.classList.remove("overlay");
 }
 
-const onClosePopup = (popup) => {
-  removeBgFilter();
-  popup.classList.remove("popup_open");
+const addNoScroll = (isBodyNoScroll) => {
+  if (isBodyNoScroll) document.querySelector("body").classList.add("no_scroll");
 }
 
-export const popupHandler = (clickEl, closeEl, popupEl) => {
+const removeNoScroll = (isBodyNoScroll) => {
+  if (isBodyNoScroll) document.querySelector("body").classList.remove("no_scroll");
+}
+
+const onClosePopup = (params) => {
+  const { popupEl, isOverlay, styleClass = "popup_open", isBodyNoScroll } = params;
+
+  removeBgFilter(isOverlay);
+  removeNoScroll(isBodyNoScroll);
+  popupEl.classList.remove(styleClass);
+}
+
+export const popupHandler = (params) => {
+  const { clickEl, popupEl, closeEl = null, styleClass = "popup_open", isOverlay = false, isBodyNoScroll = false } = params;
 
   clickEl.addEventListener("click", (e) => {
     e.stopPropagation();
-    addBgFilter();
-    popupEl.classList.toggle("popup_open");
-    popupEl.scrollTop = 0;
+    if (!popupEl.classList.contains(styleClass)) {
+      addBgFilter(isOverlay);
+      addNoScroll(isBodyNoScroll);
+      popupEl.classList.toggle(styleClass);
+      popupEl.scrollTop = 0;
+      return;
+    }
+    onClosePopup(params);
   });
 
-  if (closeEl) closeEl.addEventListener("click", () => onClosePopup(popupEl));
+  if (closeEl) closeEl.addEventListener("click", () => onClosePopup(params));
 
-  clickOutside(popupEl, () => onClosePopup(popupEl));
-  focusTrap(popupEl, () => onClosePopup(popupEl));
+  clickOutsidePopup(params, () => onClosePopup(params));
+  focusTrap(popupEl, () => onClosePopup(params));
 }
 
 export const footerPopUp = () => {
-  popupHandler(privacyOpenButton, privacyPopupClose, privacyPopup);
-  privacyPopupCloseBig.addEventListener("click", () => onClosePopup(privacyPopup))
+
+  const params = {
+    clickEl: privacyOpenButton,
+    popupEl: privacyPopup,
+    closeEl: privacyPopupClose,
+    isOverlay: true
+  }
+
+  popupHandler(params);
+  privacyPopupCloseBig.addEventListener("click", () => onClosePopup(params));
 }
 
 export const burgerPopup = () => {
-  popupHandler(burger, null, nav);
+
+  const params = {
+    clickEl: burger,
+    popupEl: nav,
+    isOverlay: true,
+    isBodyNoScroll: true
+  }
+
+  popupHandler(params);
 }

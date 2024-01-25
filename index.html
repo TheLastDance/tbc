@@ -15,11 +15,17 @@
 <body>
   <header>
     <nav>
+      <div id="overlay" class="display_none"></div>
       <div class="tbc_icon">
         <a href="#">
           <img src="./assets/icons/tbcIcon.svg" alt="home">
         </a>
       </div>
+      <button type="button" id="burger" class="burger">
+        <div class="burger_line_1"></div>
+        <div class="burger_line_2"></div>
+        <div class="burger_line_3"></div>
+      </button>
       <div id="navigation_list" class="navigation_container">
         <ul class="navigation_list">
           <li>
@@ -36,11 +42,6 @@
           </li>
         </ul>
       </div>
-      <button type="button" id="burger" class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </button>
     </nav>
   </header>
   <main>
@@ -178,7 +179,7 @@
       </div>
     </div>
   </footer>
-  <div id="overlay"></div>
+  <!-- <div id="overlay"></div> -->
   <div id="privacy_popup" class="privacy_popup">
     <div>
       <button type="button" id="privacy_popup_close">

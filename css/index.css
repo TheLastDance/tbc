@@ -27,7 +27,12 @@ button {
   cursor: pointer;
 }
 
+.display_none {
+  display: none;
+}
+
 .overlay {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +41,13 @@ button {
   background-color: rgba(19, 18, 18, 0.5);
   overflow: hidden;
   z-index: 1;
+}
+
+body.no_scroll {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
 }
 
 :root {
