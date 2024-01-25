@@ -98,8 +98,13 @@ footer {
   top: 0;
   background-color: var(--greyBgColor);
   z-index: 2;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: auto !important;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.privacy_popup>* {
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .privacy_popup::-webkit-scrollbar {
