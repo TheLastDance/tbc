@@ -97,7 +97,7 @@ footer {
   right: -36%;
   top: 0;
   background-color: var(--greyBgColor);
-  z-index: 2;
+  z-index: 200;
   overflow-y: auto;
 }
 
