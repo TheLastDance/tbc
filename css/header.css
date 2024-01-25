@@ -95,20 +95,20 @@ nav {
   margin-left: 50%;
 }
 
-.overlay~.burger span {
+.no_scroll .burger span {
   background-color: var(--popupTextColor);
 }
 
-.overlay~.burger .burger_line_1 {
+.no_scroll .burger .burger_line_1 {
   transform-origin: right;
   transform: rotate(-90deg) translateX(4px);
 }
 
-.overlay~.burger {
+.no_scroll .burger {
   transform: rotate(-45deg);
 }
 
-.overlay~.burger .burger_line_3 {
+.no_scroll .burger .burger_line_3 {
   transform-origin: left;
   transform: rotate(-90deg) translateX(-4px);
 }
