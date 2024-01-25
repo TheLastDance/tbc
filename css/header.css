@@ -87,7 +87,6 @@ nav {
   transition: ease .4s;
 }
 
-
 .burger span:nth-child(2) {
   width: 100%;
 }
@@ -96,20 +95,20 @@ nav {
   margin-left: 50%;
 }
 
-.burger:has(+ .popup_open) span {
+.overlay~.burger span {
   background-color: var(--popupTextColor);
 }
 
-.burger:has(+ .popup_open) .burger_line_1 {
+.overlay~.burger .burger_line_1 {
   transform-origin: right;
   transform: rotate(-90deg) translateX(4px);
 }
 
-.burger:has(+ .popup_open) {
+.overlay~.burger {
   transform: rotate(-45deg);
 }
 
-.burger:has(+ .popup_open) .burger_line_3 {
+.overlay~.burger .burger_line_3 {
   transform-origin: left;
   transform: rotate(-90deg) translateX(-4px);
 }
