@@ -19,7 +19,7 @@ const removeBgFilter = () => {
 }
 
 const onClosePopup = (popup) => {
-  // removeBgFilter();
+  removeBgFilter();
   popup.classList.remove("popup_open");
 }
 
@@ -27,7 +27,7 @@ export const popupHandler = (clickEl, closeEl, popupEl) => {
 
   clickEl.addEventListener("click", (e) => {
     e.stopPropagation();
-    // addBgFilter();
+    addBgFilter();
     popupEl.classList.toggle("popup_open");
     popupEl.scrollTop = 0;
   });
