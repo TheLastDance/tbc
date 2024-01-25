@@ -99,6 +99,8 @@ footer {
   background-color: var(--greyBgColor);
   z-index: 2;
   overflow-y: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .privacy_popup::-webkit-scrollbar {
