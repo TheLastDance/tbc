@@ -26,6 +26,10 @@ button {
   cursor: pointer;
 }
 
+#overlay {
+  z-index: 1;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -33,7 +37,6 @@ button {
   width: 100%;
   height: calc(100% + var(--fixedHeight));
   background-color: rgba(19, 18, 18, 0.5);
-  z-index: 1;
 }
 
 :root {
