@@ -75,6 +75,7 @@ nav {
   justify-content: space-between;
   z-index: 3;
   transition: ease .4s;
+  color: var(--arrowIconColor);
 }
 
 .burger div {
