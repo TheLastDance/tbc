@@ -77,7 +77,6 @@ nav {
   transition: ease .4s;
   color: var(--arrowIconColor);
   cursor: pointer;
-  background-color: unset;
 }
 
 .burger span {
