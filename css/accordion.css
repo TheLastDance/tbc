@@ -18,12 +18,13 @@
 
 .accordion_head h3 {
   font-size: var(--FS24);
+  font-weight: 400;
 }
 
 .accordion_head a {
   font-size: var(--FS20);
   color: var(--blueColor);
-  font-weight: 500;
+  font-weight: 600;
   transition: ease .4s;
 }
 
@@ -49,6 +50,7 @@
   align-items: center;
   padding: 15px 0;
   font-size: var(--FS18);
+  font-weight: 500;
   min-height: 75px;
 }
 
@@ -67,6 +69,7 @@
 .accordion-dropdown {
   margin-bottom: 30px;
   font-size: var(--FS14);
+  line-height: 2;
 }
 
 .accordion-dropdown>p {
@@ -74,7 +77,7 @@
 }
 
 .accordion-dropdown>div {
-  padding: 30px 0 30px 20px;
+  padding: 35px 0 35px 20px;
 }
 
 .accordion-dropdown>div p {

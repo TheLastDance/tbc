@@ -1,16 +1,10 @@
-const sliders = document.querySelectorAll(".slider_item");
-const buttons = document.querySelector("#slider_buttons");
-const left = document.querySelector("#left_arrow");
-const right = document.querySelector("#right_arrow");
-let interval;
 
-const buildButtons = (array) => {
+const buildButtons = (array, element) => {
   array.forEach((_, index) => {
     const button = document.createElement("button");
     button.setAttribute("data-index", index);
-    button.attr
     button.type = "button";
-    buttons.appendChild(button);
+    element.appendChild(button);
   })
 }
 
@@ -33,13 +27,7 @@ const goLeft = (index, array) => {
   return array[index - 1];
 }
 
-const startInterval = () => {
-  interval = setInterval(() => {
-    sliderLoop(sliders, "absolute");
-  }, 3500);
-}
-
-const handleButtons = (array, className, e) => {
+const handleButtons = (array, className, e, interval, startInterval) => {
   if (e.target.tagName.toLowerCase() === "button") {
     const index = e.target.getAttribute("data-index");
     clearInterval(interval);
@@ -51,23 +39,44 @@ const handleButtons = (array, className, e) => {
   }
 }
 
-export const sliderFunc = () => {
-  buildButtons(sliders);
+// reusable slider builder function, adds functionality to slider, need to provide elements as arguments and add styles in css after.
+export const sliderBuilder = (slides, left, right, buttons, className = "absolute") => {
+  let interval;
+
+  const startInterval = () => {
+    interval = setInterval(() => {
+      sliderLoop(slides, className);
+    }, 3500);
+  }
+
+  if (buttons) {
+    buildButtons(slides, buttons);
+    buttons.addEventListener("click", (e) => handleButtons(slides, className, e, interval, startInterval));
+  }
+
   startInterval();
 
   right.addEventListener("click", () => {
     clearInterval(interval);
-    sliderLoop(sliders, "absolute", false);
+    sliderLoop(slides, className);
     startInterval();
   });
 
   left.addEventListener("click", () => {
     clearInterval(interval);
-    sliderLoop(sliders, "absolute", true);
+    sliderLoop(slides, className, true);
     startInterval();
   });
 
-  buttons.addEventListener("click", (e) => handleButtons(sliders, "absolute", e))
+}
+
+export const slider = () => {
+  const sliders = document.querySelectorAll(".slider_item");
+  const buttons = document.querySelector("#slider_buttons");
+  const left = document.querySelector("#left_arrow");
+  const right = document.querySelector("#right_arrow");
+
+  sliderBuilder(sliders, left, right, buttons);
 }
 
 

@@ -5,20 +5,20 @@
   padding-bottom: 36px;
 }
 
-#left_arrow,
-#right_arrow {
+.left_arrow,
+.right_arrow {
   top: 50%;
   width: 18px;
   height: 35px;
 }
 
-#left_arrow {
+.left_arrow {
   position: absolute;
   left: 5%;
   transform: translateY(-50%);
 }
 
-#right_arrow {
+.right_arrow {
   position: absolute;
   transform: translateY(-50%) rotate(180deg);
   right: 5%;
@@ -39,6 +39,7 @@
 .partners h3 {
   padding: 34px 0 31px 0;
   font-size: var(--FS24);
+  font-weight: 500;
 }
 
 .slider_item_container {

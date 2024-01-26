@@ -2,13 +2,7 @@
 import { clickOutsidePopup } from "./clickOutside.js";
 import { focusTrap } from "./focusTrap.js";
 
-const privacyPopup = document.querySelector("#privacy_popup");
-const privacyPopupClose = document.querySelector("#privacy_popup_close");
-const privacyPopupCloseBig = document.querySelector("#privacy_popup_close_big");
-const privacyOpenButton = document.querySelector("#privacy_button");
 const overlay = document.querySelector("#overlay");
-const burger = document.querySelector("#burger");
-const nav = document.querySelector("#navigation_list");
 
 const addBgFilter = (isOverlay) => {
   if (isOverlay) overlay.classList.add("overlay");
@@ -34,7 +28,7 @@ const onClosePopup = (params) => {
   popupEl.classList.remove(styleClass);
 }
 
-export const popupHandler = (params) => {
+const popupHandler = (params) => {
   const { clickEl, popupEl, closeEl = null, styleClass = "popup_open", isOverlay = false, isBodyNoScroll = false } = params;
 
   clickEl.addEventListener("click", (e) => {
@@ -56,6 +50,10 @@ export const popupHandler = (params) => {
 }
 
 export const footerPopUp = () => {
+  const privacyPopup = document.querySelector("#privacy_popup");
+  const privacyPopupClose = document.querySelector("#privacy_popup_close");
+  const privacyPopupCloseBig = document.querySelector("#privacy_popup_close_big");
+  const privacyOpenButton = document.querySelector("#privacy_button");
 
   const params = {
     clickEl: privacyOpenButton,
@@ -69,6 +67,8 @@ export const footerPopUp = () => {
 }
 
 export const burgerPopup = () => {
+  const burger = document.querySelector("#burger");
+  const nav = document.querySelector("#navigation_list");
 
   const params = {
     clickEl: burger,

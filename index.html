@@ -13,21 +13,19 @@
 </head>
 
 <body>
+
   <header>
     <nav>
+
       <div id="overlay" class="display_none"></div>
+
       <div class="tbc_icon">
         <a href="#">
           <img src="./assets/icons/tbcIcon.svg" alt="home">
         </a>
       </div>
-      <!-- need to use anchor tag here to avoid bugs on old browsers (mostly safari) -->
-      <a href="javascript:void(0);" role="button" type="button" id="burger" class="burger">
-        <span class="burger_line_1"></span>
-        <span class="burger_line_2"></span>
-        <span class="burger_line_3"></span>
-      </a>
-      <div id="navigation_list" class="navigation_container">
+
+      <div class="navigation_container">
         <ul class="navigation_list">
           <li>
             <a href="#">მთავარი</a>
@@ -43,8 +41,37 @@
           </li>
         </ul>
       </div>
+
+      <div class="burger_menu">
+        <!-- need to use anchor tag here to avoid bugs on old browsers (mostly safari) -->
+        <a href="javascript:void(0);" role="button" type="button" id="burger" class="burger">
+          <span class="burger_line_1"></span>
+          <span class="burger_line_2"></span>
+          <span class="burger_line_3"></span>
+        </a>
+
+        <!-- popup menu -->
+        <div id="navigation_list" class="burger_navigation_container">
+          <ul class="burger_navigation_list">
+            <li>
+              <a href="#">მთავარი</a>
+            </li>
+            <li>
+              <a href="#">TBC IT</a>
+            </li>
+            <li>
+              <a href="#" class="navLink_active">TBC x USAID</a>
+            </li>
+            <li>
+              <a href="#">რისკები</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </nav>
   </header>
+
   <main>
 
     <section class="intro">
@@ -76,13 +103,16 @@
     </section>
 
     <section class="slider">
-      <button type="button" id="left_arrow">
+
+      <button type="button" id="left_arrow" class="left_arrow">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41">
           <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
         </svg>
       </button>
+
       <div class="partners">
         <h3>პროექტის პარტნიორები</h3>
+
         <div class="slider_item_container">
           <div class="slider_item">
             <picture>
@@ -119,15 +149,18 @@
             </picture>
           </div>
         </div>
-        <div id="slider_buttons">
 
+        <div id="slider_buttons">
         </div>
+
       </div>
-      <button type="button" id="right_arrow">
+
+      <button type="button" id="right_arrow" class="right_arrow">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41">
           <path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
         </svg>
       </button>
+
     </section>
 
     <section class="accordion">
@@ -139,8 +172,10 @@
         <div id="accordion_questions"></div>
       </div>
     </section>
+
   </main>
   <footer>
+
     <div class="footer">
       <div class="footer_container">
         <div class="tbc_logo">
@@ -179,8 +214,9 @@
         </div>
       </div>
     </div>
+
   </footer>
-  <!-- <div id="overlay"></div> -->
+
   <div id="privacy_popup" class="privacy_popup">
     <div>
       <button type="button" id="privacy_popup_close">
@@ -444,6 +480,7 @@
       <button id="privacy_popup_close_big" type="button">დახურვა</button>
     </div>
   </div>
+
 </body>
 
 </html>

@@ -48,7 +48,7 @@
 }
 
 .intro_content a {
-  color: var(--darkBlueColor);
-  font-weight: 500;
-  font-size: var(--FS22);
+  color: var(--blueColor);
+  font-weight: 700;
+  font-size: var(--FS20);
 }

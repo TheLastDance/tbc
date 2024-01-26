@@ -1,8 +1,6 @@
 import { accordionData } from "../data/accordion.js";
 import { addImage } from "./utils.js";
 
-const container = document.querySelector("#accordion_questions");
-
 const buildAccordion = (data, container) => {
   const parser = new DOMParser();
 
@@ -42,9 +40,14 @@ const accordionFunctionality = (container) => {
   })
 }
 
-export const accordion = () => {
-  buildAccordion(accordionData, container);
+export const accordionBuilder = (data, container) => {
+  buildAccordion(data, container);
   accordionFunctionality(container);
+}
+
+export const accordion = () => {
+  const container = document.querySelector("#accordion_questions");
+  accordionBuilder(accordionData, container);
 }
 
 

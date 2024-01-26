@@ -12,6 +12,7 @@
 .courses_content h3 {
   font-size: var(--FS24);
   padding-bottom: 67px;
+  font-weight: 500;
 }
 
 #course_list {
@@ -46,6 +47,7 @@
 .course_info h5 {
   font-size: var(--FS18);
   margin: 34px 0 25px 0;
+  font-weight: 400;
 }
 
 .course_info p {
@@ -62,7 +64,7 @@
 
 .course_details a {
   color: var(--blueColor);
-  font-size: var(--FS18);
+  font-size: var(--FS16);
   line-height: 18px;
   margin-left: 10px;
   font-weight: 500;
