@@ -3,6 +3,7 @@ import { VerticalSwiper } from "./utils.js";
 
 export const header = () => {
   const header = document.querySelector("header");
+  const body = document.querySelector("body");
 
   // adding opacity to header
   window.addEventListener("scroll", () => {
@@ -15,11 +16,13 @@ export const header = () => {
   })
 
   // adding header animation on touch
-  VerticalSwiper(window, () => {
-    header.style.top = "0";
-  }, () => {
-    header.style.top = "-84px";
-  })
+  if (!body.classList.contains("no_scroll")) {
+    VerticalSwiper(window, () => {
+      header.style.top = "0";
+    }, () => {
+      header.style.top = "-84px";
+    })
+  }
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 980) header.style.top = "0";

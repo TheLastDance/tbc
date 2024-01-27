@@ -34,6 +34,7 @@ export const HorizontalSwiper = (element, cbLeft, cbRight) => {
 }
 
 export const VerticalSwiper = (element, cbUp, cbDown) => {
+  const body = document.querySelector("body");
   let startY;
 
   const handleStart = (e) => {
@@ -41,7 +42,7 @@ export const VerticalSwiper = (element, cbUp, cbDown) => {
   }
 
   const handleMove = (event) => {
-    if (!startY) return;
+    if (!startY && !body.classList.contains("no_scroll")) return;
 
     const endY = event.touches[0].clientY;
     const deltaY = endY - startY;
