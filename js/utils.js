@@ -47,7 +47,7 @@ export const VerticalSwiper = (element, cbUp, cbDown) => {
     const endY = event.touches[0].clientY;
     const deltaY = endY - startY;
 
-    if (Math.abs(deltaY) > 0) {
+    if (Math.abs(deltaY) > 50) {
       if (deltaY > 0) {
         cbUp();
       } else {
