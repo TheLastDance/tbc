@@ -20,7 +20,7 @@ export const header = () => {
     VerticalSwiper(window, () => {
       header.style.top = "0";
     }, () => {
-      header.style.top = "-84px";
+      if (!body.classList.contains("no_scroll")) header.style.top = "-84px";
     })
   }
 
