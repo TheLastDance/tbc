@@ -6,10 +6,11 @@ All the functionality is custom, no other libraries used. The only additional to
 
 ## Table of Contents
 
-1. [Tech Stack](#tech-stack)
-2. [Project Structure](#project-structure)
-3. [Functionality](#functionality)
-4. [Installation](#installation)
+1. [About](#tbc-academy-technical-task)
+2. [Tech Stack](#tech-stack)
+3. [Project Structure](#project-structure)
+4. [Functionality](#functionality)
+5. [Installation](#installation)
 
 ## Tech Stack
 
