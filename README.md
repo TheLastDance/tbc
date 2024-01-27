@@ -4,6 +4,8 @@ This project was developed as part of the TBC Academy React course selection pro
 The decision to use vanilla JS was made in response to the test task, where it was considered advantageous. Otherwise, I would implement it using React.
 All the functionality is custom, no other libraries used. The only additional tool installed is liveserver, which ensures proper handling of ES6 modules.
 
+[Production link](https://thelastdance.github.io/tbc/index.html)
+
 ## Table of Contents
 
 1. [About](#tbc-academy-technical-task)
@@ -49,6 +51,7 @@ All the functionality is custom, no other libraries used. The only additional to
 - Used `title` and `meta description` tags inside head for better seo optimisation.
 - Utilized event delegation methodology for better optimisation (accordion, slider buttons).
 - Added horizontal swipe functionality to slider.
+- Implemented vertical swipe functionality for header.
 
 ## Installation
 

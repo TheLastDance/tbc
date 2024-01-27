@@ -1,4 +1,4 @@
-import { swiper } from "./utils.js";
+import { HorizontalSwiper } from "./utils.js";
 
 const buildButtons = (array, element) => {
   array.forEach((_, index) => {
@@ -71,7 +71,7 @@ export const sliderBuilder = (slides, left, right, buttons, swipeContainer, clas
     handleSlider(true);
   });
 
-  if (swipeContainer) swiper(swipeContainer, () => handleSlider(true), handleSlider);
+  if (swipeContainer) HorizontalSwiper(swipeContainer, () => handleSlider(true), handleSlider);
 }
 
 export const slider = () => {

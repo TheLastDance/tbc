@@ -6,7 +6,7 @@ export const addImage = (href, alt) => {
   return image;
 }
 
-export const swiper = (element, cbLeft, cbRight) => {
+export const HorizontalSwiper = (element, cbLeft, cbRight) => {
   let startX;
 
   const handleStart = (e) => {
@@ -26,6 +26,33 @@ export const swiper = (element, cbLeft, cbRight) => {
         cbRight();
       }
       startX = null;
+    }
+  }
+
+  element.addEventListener('touchstart', handleStart);
+  element.addEventListener('touchmove', handleMove);
+}
+
+export const VerticalSwiper = (element, cbUp, cbDown) => {
+  let startY;
+
+  const handleStart = (e) => {
+    startY = e.touches[0].clientY;
+  }
+
+  const handleMove = (event) => {
+    if (!startY) return;
+
+    const endY = event.touches[0].clientY;
+    const deltaY = endY - startY;
+
+    if (Math.abs(deltaY) > 0) {
+      if (deltaY > 0) {
+        cbUp();
+      } else {
+        cbDown();
+      }
+      startY = null;
     }
   }
 

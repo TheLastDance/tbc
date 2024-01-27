@@ -106,12 +106,6 @@ footer {
   display: none;
 }
 
-.popup_open {
-  visibility: visible;
-  right: 0;
-  transition: ease .4s;
-}
-
 #privacy_popup_close {
   position: absolute;
   right: 0;

@@ -44,6 +44,13 @@ button {
   z-index: 1;
 }
 
+.popup_open {
+  visibility: visible;
+  right: 0;
+  transition: ease .4s;
+  opacity: 1;
+}
+
 :root {
   --blueColor: rgb(0, 174, 239);
   --darkBlueColor: rgb(0, 136, 203);
