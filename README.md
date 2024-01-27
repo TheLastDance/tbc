@@ -38,16 +38,16 @@ All the functionality is custom, no other libraries used. The only additional to
 
 ## Functionality
 
-- Made reusable builder functions which give us opportunity to reuse them with another data or dom nodes e.g - (accordion, courses, popup, slider).
-- Created reusable functions for click outside and focus trap handling to provide better user experience, used in popup logic.
+- Made reusable builder functions, allowing to reuse them with another data or DOM nodes. e.g - (accordion, courses, popup, slider).
+- Created reusable functions for click outside and focus trap, enhancing user experience, particularly in popup interactions.
 - Used `picture` tag to handle both webp and jpg formats if old device or browser has no accesibility with webp format.
 - Fully responsive web design.
-- Tested on various PC browsers and several mobile devices via browserstack.com.
+- Tested on multiple PC browsers and several mobile devices via browserstack.com.
 - Supported by relatively old devices (Ios/Safari 12.5.7 +).
 - Added burger and terms/conditions popups with fully same visuality and functionality.
-- added `title` and `meta description` tags inside head for better seo optimisation
+- Used `title` and `meta description` tags inside head for better seo optimisation
 
-## Installastion
+## Installation
 
 1. Clone this repository to your local machine.
 2. Install dependencies - `npm install`
