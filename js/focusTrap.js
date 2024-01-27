@@ -1,5 +1,5 @@
 
-export const focusTrap = (element, onEsc) => {
+export const focusTrap = (element, className, onEsc) => {
   const focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
   const firstFocusableEl = focusableEls[0];
   const lastFocusableEl = focusableEls[focusableEls.length - 1];
@@ -24,7 +24,8 @@ export const focusTrap = (element, onEsc) => {
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    const isOpen = element.classList.contains(className);
+    if (e.key === "Escape" && isOpen) {
       onEsc();
     }
   })

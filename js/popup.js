@@ -32,7 +32,7 @@ const popupHandler = (params) => {
   const { clickEl, popupEl, closeEl = null, styleClass = "popup_open", isOverlay = false, isBodyNoScroll = false } = params;
 
   clickEl.addEventListener("click", (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // to avoid click outside listener
     if (!popupEl.classList.contains(styleClass)) {
       addBgFilter(isOverlay);
       addNoScroll(isBodyNoScroll);
@@ -46,7 +46,7 @@ const popupHandler = (params) => {
   if (closeEl) closeEl.addEventListener("click", () => onClosePopup(params));
 
   clickOutsidePopup(params, () => onClosePopup(params));
-  focusTrap(popupEl, () => onClosePopup(params));
+  focusTrap(popupEl, styleClass, () => onClosePopup(params));
 }
 
 export const footerPopUp = () => {

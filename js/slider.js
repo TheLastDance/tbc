@@ -39,7 +39,7 @@ const handleButtons = (array, className, e, interval, startInterval) => {
   }
 }
 
-// reusable slider builder function, adds functionality to slider, need to provide elements as arguments and add styles in css after.
+// reusable slider builder function, adds functionality to slider, just need to provide elements as arguments and add styles in css after.
 export const sliderBuilder = (slides, left, right, buttons, className = "absolute") => {
   let interval;
 
