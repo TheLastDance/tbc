@@ -1,3 +1,4 @@
+import { swiper } from "./utils.js";
 
 const buildButtons = (array, element) => {
   array.forEach((_, index) => {
@@ -40,13 +41,19 @@ const handleButtons = (array, className, e, interval, startInterval) => {
 }
 
 // reusable slider builder function, adds functionality to slider, just need to provide elements as arguments and add styles in css after.
-export const sliderBuilder = (slides, left, right, buttons, className = "absolute") => {
+export const sliderBuilder = (slides, left, right, buttons, swipeContainer, className = "absolute") => {
   let interval;
 
   const startInterval = () => {
     interval = setInterval(() => {
       sliderLoop(slides, className);
     }, 3500);
+  }
+
+  const handleSlider = (reversed) => {
+    clearInterval(interval);
+    sliderLoop(slides, className, reversed);
+    startInterval();
   }
 
   if (buttons) {
@@ -57,17 +64,14 @@ export const sliderBuilder = (slides, left, right, buttons, className = "absolut
   startInterval();
 
   right.addEventListener("click", () => {
-    clearInterval(interval);
-    sliderLoop(slides, className);
-    startInterval();
+    handleSlider();
   });
 
   left.addEventListener("click", () => {
-    clearInterval(interval);
-    sliderLoop(slides, className, true);
-    startInterval();
+    handleSlider(true);
   });
 
+  if (swipeContainer) swiper(swipeContainer, () => handleSlider(true), handleSlider);
 }
 
 export const slider = () => {
@@ -75,8 +79,9 @@ export const slider = () => {
   const buttons = document.querySelector("#slider_buttons");
   const left = document.querySelector("#left_arrow");
   const right = document.querySelector("#right_arrow");
+  const swipeContainer = document.querySelector("#slider_item_container");
 
-  sliderBuilder(sliders, left, right, buttons);
+  sliderBuilder(sliders, left, right, buttons, swipeContainer);
 }
 
 

@@ -1,7 +1,7 @@
 # TBC Academy technical task
 
 This project was developed as part of the TBC Academy React course selection process. This is [TBC x Usaid webpage](https://www.tbcacademy.ge/usaid) clone with identical functionality.
-The decision to use vanilla JS was made in response to the test task, where it was considered advantageous. Otherwise, I could also easily implemented this project using React.
+The decision to use vanilla JS was made in response to the test task, where it was considered advantageous. Otherwise, I would implement it using React.
 All the functionality is custom, no other libraries used. The only additional tool installed is liveserver, which ensures proper handling of ES6 modules.
 
 ## Table of Contents
@@ -46,8 +46,9 @@ All the functionality is custom, no other libraries used. The only additional to
 - Tested on multiple PC browsers and several mobile devices via browserstack.com.
 - Supported by relatively old devices (Ios/Safari 12.5.7 +).
 - Added burger and terms/conditions popups with fully same visuality and functionality.
-- Used `title` and `meta description` tags inside head for better seo optimisation
-- Utilized event delegation methodology for better optimisation (accordion, slider buttons)
+- Used `title` and `meta description` tags inside head for better seo optimisation.
+- Utilized event delegation methodology for better optimisation (accordion, slider buttons).
+- Added horizontal swipe functionality to slider.
 
 ## Installation
 
