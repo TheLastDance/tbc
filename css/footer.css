@@ -99,6 +99,7 @@ footer {
   background-color: var(--greyBgColor);
   z-index: 2;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .privacy_popup::-webkit-scrollbar {

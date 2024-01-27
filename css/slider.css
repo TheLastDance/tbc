@@ -109,6 +109,10 @@
   #left_arrow {
     display: none;
   }
+
+  #slider_buttons button {
+    padding: 5px;
+  }
 }
 
 @media(max-width:320px) {
