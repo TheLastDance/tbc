@@ -1,7 +1,7 @@
 import { accordionData } from "../data/accordion.js";
 import { addImage } from "./utils.js";
 
-const buildAccordion = (data, container) => {
+const accordionVisual = (data, container) => {
   const parser = new DOMParser();
 
   data.forEach((item) => {
@@ -41,7 +41,7 @@ const accordionFunctionality = (container) => {
 }
 
 export const accordionBuilder = (data, container) => {
-  buildAccordion(data, container);
+  accordionVisual(data, container);
   accordionFunctionality(container);
 }
 

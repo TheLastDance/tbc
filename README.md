@@ -47,6 +47,7 @@ All the functionality is custom, no other libraries used. The only additional to
 - Supported by relatively old devices (Ios/Safari 12.5.7 +).
 - Added burger and terms/conditions popups with fully same visuality and functionality.
 - Used `title` and `meta description` tags inside head for better seo optimisation
+- Utilized event delegation methodology for better optimisation (accordion, slider buttons)
 
 ## Installation
 
